@@ -1,9 +1,3 @@
-import { parse } from 'https://deno.land/std@0.166.0/flags/mod.ts';
-
-const {
-  height = 10,
-  message = 'Happy Xmas!',
-}: { height: number; message: string } = parse(Deno.args);
 const topStar = ' \u2605'; // ' ★'
 const fullWidthSolidus = '\u001b[32m\uFF0F'; // '／'
 const fullWidthReverseSolidus = '\u001b[32m\uFF3C\n'; // '＼'
@@ -28,7 +22,13 @@ const ornaments = [
   '\u2E2E', // '⸮'
   '\uFF61', // '｡'
 ];
-const colors = [33, 34, 35, 36, 37];
+const colors = [
+  33, // yellow
+  34, // blue
+  35, // magenta
+  36, // cyan
+  37, // white
+];
 const circumflexAccent = '\u001b[32m\u005e';
 
 let result = '';
@@ -101,14 +101,9 @@ w('\n');
       w(' ');
     }
   }
-})(height);
+})(20);
 w('\n\n');
 
-// 最後にメッセージ
-for (let i = 1; i < height + 3 - message.length / 2; i++) {
-  w(' ');
-}
-w(message);
-w('\n');
+w('\u001b[0mDeno \u001b[35mloves you\u001b[0m Happy Xmas, TypeScripters!');
 
 console.log(result);

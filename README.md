@@ -11,7 +11,7 @@ $ deno install --name xmas https://raw.githubusercontent.com/YuG1224/kusa/main/a
 ## Usage
 
 ```
-$ xmas --height 10 --message 'Happy Xmas!'
+$ xmas
 ```
 
 ![terminal.gif](terminal.gif)
