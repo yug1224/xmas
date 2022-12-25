@@ -5,7 +5,7 @@
 ## Install
 
 ```
-$ deno install --name xmas https://raw.githubusercontent.com/YuG1224/kusa/main/app.ts
+$ deno install --name xmas https://raw.githubusercontent.com/YuG1224/xmas/main/app.ts
 ```
 
 ## Usage
